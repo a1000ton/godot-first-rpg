@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=320
 window/size/viewport_height=180
-window/size/window_width_override=3360
-window/size/window_height_override=1890
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="viewport"
 
 [importer_defaults]
@@ -101,6 +101,7 @@ roll={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="PlayerHurtbox"
 2d_physics/layer_4="EnemyHurtbox"
+2d_physics/layer_5="Enemy"
 
 [rendering]
 

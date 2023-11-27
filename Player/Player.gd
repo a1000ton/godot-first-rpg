@@ -2,11 +2,12 @@ extends CharacterBody2D
 
 const ACCELERATION = 1000
 const MAX_SPEED = 75
-const ROLL_SPEED = 95
+const ROLL_SPEED = 115
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
 @onready var animationState = animationTree.get("parameters/playback")
+@onready var swordHitbox = $HitboxPivot/SwordHitbox
 
 enum {
 	MOVE,
@@ -20,6 +21,8 @@ var roll_vector = Vector2.LEFT
 
 func _ready():
 	animationTree.active = true
+	swordHitbox.knockback_vector = roll_vector
+	
 
 func _physics_process(delta):
 	match state:
@@ -41,6 +44,8 @@ func move_state(delta):
 	
 	if input_vector != Vector2.ZERO:
 		roll_vector = input_vector
+		swordHitbox.knockback_vector = roll_vector
+		
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationTree.set("parameters/Attack/blend_position", input_vector)
@@ -50,8 +55,7 @@ func move_state(delta):
 		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
 	else:
 		animationState.travel("Idle")
-		velocity.x = move_toward(velocity.x, 0, MAX_SPEED)
-		velocity.y = move_toward(velocity.y, 0, MAX_SPEED)
+		velocity = velocity.move_toward(Vector2.ZERO, MAX_SPEED)
 		
 	move_and_slide()
 	
