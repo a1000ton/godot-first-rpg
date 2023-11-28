@@ -6,13 +6,19 @@ extends CharacterBody2D
 var knockback = Vector2.ZERO
 var dying = false
 
+const HIT_COLOR = "#f6004a"
+
 func _physics_process(delta):
 	velocity = knockback.move_toward(Vector2.ZERO, 200 * delta)
 	knockback = velocity
 	
+	if(dying):
+		animatedSprite.modulate = HIT_COLOR
+	
 	if(dying && knockback == Vector2.ZERO):
 		animatedSprite.visible = false
 		create_death_effect()
+		queue_free()
 		
 	move_and_slide()
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://3oxf088ndgw"]
+[gd_scene load_steps=14 format=3 uid="uid://bpoo07yrxs1sb"]
 
 [ext_resource type="Texture2D" uid="uid://c0uxcvaanrvd" path="res://Effects/EnemyDeathEffect.png" id="1_bajro"]
 [ext_resource type="Script" path="res://Effects/EnemyDeathEffect.gd" id="1_p3mvi"]

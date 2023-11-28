@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cn343v515ymjy" path="res://World/CliffTileset.png" id="2_utril"]
 [ext_resource type="PackedScene" uid="uid://pv7ll36d8yrg" path="res://World/Tree.tscn" id="5_yhgty"]
 [ext_resource type="PackedScene" uid="uid://5omvrhcebv74" path="res://World/Grass.tscn" id="7_41evu"]
-[ext_resource type="PackedScene" uid="uid://ba00l31okwm8d" path="res://Enemies/Bat.tscn" id="8_puq7e"]
+[ext_resource type="PackedScene" uid="uid://b8vjytvsq342m" path="res://Enemies/Bat.tscn" id="8_puq7e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pe1dw"]
 texture = ExtResource("2_mq0u4")

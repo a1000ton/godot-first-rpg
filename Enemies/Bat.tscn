@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ba00l31okwm8d"]
+[gd_scene load_steps=13 format=3 uid="uid://b8vjytvsq342m"]
 
 [ext_resource type="Texture2D" uid="uid://0moyhw5lq8gh" path="res://Enemies/Bat.png" id="1_obwp2"]
 [ext_resource type="Texture2D" uid="uid://b2vq3lsrsqhd4" path="res://Shadows/SmallShadow.png" id="2_guyg1"]
