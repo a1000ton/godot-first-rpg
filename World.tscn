@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxuohwb18nw6i" path="res://World/GrassBackground.png" id="1_5d2o3"]
 [ext_resource type="PackedScene" uid="uid://dp43h8fu125db" path="res://World/Bush.tscn" id="1_yx3vo"]
-[ext_resource type="PackedScene" uid="uid://cajsvpp2rhsxn" path="res://Player/player.tscn" id="2_dt88b"]
+[ext_resource type="PackedScene" uid="uid://cajsvpp2rhsxn" path="res://Player/Player.tscn" id="2_dt88b"]
 [ext_resource type="Texture2D" uid="uid://dfdq1aj40sbdt" path="res://World/DirtTileset.png" id="2_mq0u4"]
 [ext_resource type="Texture2D" uid="uid://cn343v515ymjy" path="res://World/CliffTileset.png" id="2_utril"]
 [ext_resource type="PackedScene" uid="uid://pv7ll36d8yrg" path="res://World/Tree.tscn" id="5_yhgty"]
