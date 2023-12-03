@@ -1,13 +1,10 @@
 extends CharacterBody2D
 
 @export var bat_color:Color = "#fff"
+@export var knockback = Vector2.ZERO
 
 @onready var animatedSprite = $AnimatedSprite
 @onready var stats = $Stats
-
-const HIT_COLOR = "#f6004a"
-
-var knockback = Vector2.ZERO
 
 func _ready():
 	animatedSprite.modulate = bat_color
@@ -25,7 +22,6 @@ func create_death_effect():
 	enemyDeathEffect.global_position = global_position
 
 func _on_hurtbox_area_entered(area):
-	animatedSprite.modulate = HIT_COLOR
 	stats.health -= area.damage
 	knockback = area.knockback_vector * 120
 	

@@ -763,10 +763,10 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_5co60")
 anim_player = NodePath("../AnimationPlayer")
-parameters/Attack/blend_position = Vector2(-0.00656658, -0.0155661)
-parameters/Idle/blend_position = Vector2(2.08165e-12, 2.08165e-12)
-parameters/Roll/blend_position = Vector2(-0.000252485, 0.00566041)
-parameters/Run/blend_position = Vector2(2.08165e-12, 2.08165e-12)
+parameters/Attack/blend_position = Vector2(0, 1)
+parameters/Idle/blend_position = Vector2(0, 1)
+parameters/Roll/blend_position = Vector2(0, 1)
+parameters/Run/blend_position = Vector2(0, 1)
 
 [node name="HitboxPivot" type="Marker2D" parent="."]
 position = Vector2(2.08165e-12, -4)
