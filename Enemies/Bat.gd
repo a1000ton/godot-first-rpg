@@ -1,27 +1,16 @@
 extends CharacterBody2D
 
-
 @onready var animatedSprite = $AnimatedSprite
-
-var knockback = Vector2.ZERO
-var dying = false
+@onready var stats = $Stats
 
 const HIT_COLOR = "#f6004a"
+
+var knockback = Vector2.ZERO
 
 func _physics_process(delta):
 	velocity = knockback.move_toward(Vector2.ZERO, 200 * delta)
 	knockback = velocity
-	
-	if(dying):
-		animatedSprite.modulate = HIT_COLOR
-	
-	if(dying && knockback == Vector2.ZERO):
-		animatedSprite.visible = false
-		create_death_effect()
-		queue_free()
-		
 	move_and_slide()
-	
 	
 func create_death_effect():
 	var EnemyDeathEffect = load("res://Effects/EnemyDeathEffect.tscn")
@@ -31,8 +20,14 @@ func create_death_effect():
 	enemyDeathEffect.global_position = global_position
 
 func _on_hurtbox_area_entered(area):
+	animatedSprite.modulate = HIT_COLOR
+	stats.health -= 1
 	knockback = area.knockback_vector * 120
-	dying = true
 	
 func die():
+	queue_free()
+
+func _on_stats_no_health():
+	animatedSprite.visible = false
+	create_death_effect()
 	queue_free()

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-const ACCELERATION = 1000
-const MAX_SPEED = 75
-const ROLL_SPEED = 115
+@export var ACCELERATION = 1000
+@export var MAX_SPEED = 75
+@export var ROLL_SPEED = 115
 
 @onready var animationPlayer = $AnimationPlayer
 @onready var animationTree = $AnimationTree
