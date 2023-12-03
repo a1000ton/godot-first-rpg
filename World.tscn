@@ -926,9 +926,11 @@ y_sort_enabled = true
 
 [node name="Bat" parent="Node2D/Bats" instance=ExtResource("8_puq7e")]
 position = Vector2(110, 126)
+bat_color = Color(0.858824, 0.0705882, 0.933333, 1)
 
 [node name="Bat2" parent="Node2D/Bats" instance=ExtResource("8_puq7e")]
 position = Vector2(149, 158)
 
 [node name="Bat3" parent="Node2D/Bats" instance=ExtResource("8_puq7e")]
 position = Vector2(232, 96)
+bat_color = Color(0, 0.439216, 0.439216, 1)
