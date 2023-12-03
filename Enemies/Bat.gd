@@ -6,6 +6,8 @@ extends CharacterBody2D
 @onready var animatedSprite = $AnimatedSprite
 @onready var stats = $Stats
 
+const EnemyDeathEffect = preload("res://Effects/EnemyDeathEffect.tscn")
+
 func _ready():
 	animatedSprite.modulate = bat_color
 
@@ -15,10 +17,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func create_death_effect():
-	var EnemyDeathEffect = load("res://Effects/EnemyDeathEffect.tscn")
 	var enemyDeathEffect = EnemyDeathEffect.instantiate()
-	var world = get_tree().current_scene
-	world.add_child(enemyDeathEffect)
+	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
 
 func _on_hurtbox_area_entered(area):
@@ -29,6 +29,5 @@ func die():
 	queue_free()
 
 func _on_stats_no_health():
-	animatedSprite.visible = false
-	create_death_effect()
 	queue_free()
+	create_death_effect()
