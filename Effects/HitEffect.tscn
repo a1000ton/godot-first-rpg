@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq1r5ac25x6ub"]
+
+[ext_resource type="Texture2D" uid="uid://f5ifiikwgkmc" path="res://Effects/HitEffect.png" id="1_3yjpx"]
+[ext_resource type="Script" path="res://Effects/Effect.gd" id="2_hgp0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6eue"]
+atlas = ExtResource("1_3yjpx")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snjhm"]
+atlas = ExtResource("1_3yjpx")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thfn5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6eue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snjhm")
+}],
+"loop": false,
+"name": &"Animate",
+"speed": 10.0
+}]
+
+[node name="HitEffect" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_thfn5")
+animation = &"Animate"
+frame_progress = 0.571151
+script = ExtResource("2_hgp0u")
